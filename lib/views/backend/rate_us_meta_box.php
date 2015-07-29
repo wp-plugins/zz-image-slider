@@ -19,6 +19,6 @@
         </a>
 </div>
 <div style="text-align:center;margin-bottom:10px;margin-top:10px;">
-        <a href="https://wordpress.org/" target="_blank" class="button button-primary button-hero "><?php _e("RATE ME", ZZIS_TEXT_DOMAIN) ?></a>
+        <a href="https://wordpress.org/plugins/zz-image-slider/" target="_blank" class="button button-primary button-hero "><?php _e("RATE ME", ZZIS_TEXT_DOMAIN) ?></a>
 </div>
 
