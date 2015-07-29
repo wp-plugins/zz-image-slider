@@ -25,6 +25,8 @@ ZZ Image Slider is a WordPress plugin bassed on JSSOR Slider. This plugin is per
 * Custom each slide title, description and "Read More" link
 * Drag and drop to change image place
 
+Samples can be found [here](http://zzapps.net/zzis/zzis-samples/).
+
 == Installation ==
 
 = From your WordPress dashboard =
