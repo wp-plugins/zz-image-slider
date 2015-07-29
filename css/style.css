@@ -1,0 +1,42 @@
+.zzis_container div img{
+    
+}
+
+.zzis_container h1.zzis-slide-title {
+    color: #fff;
+    position: relative;
+    text-align: center;
+    text-shadow: 2px 2px 3px #000;
+    margin: 20px 0 20px;
+}
+
+.zzis_container h2.zzis-slide-desc {
+    color: #fff;
+    position: relative;
+    text-align: center;
+    text-shadow: 2px 2px 3px #000;
+    margin: 20px 0 20px;
+    background-color: rgba(200, 200, 200, 0.4);
+}
+
+.zzis-slide-readmore-btn {
+    position: relative;
+    text-align: center;
+    border: 2px solid white;
+    width: 200px;
+    margin: 0 auto;
+    color: #fff;
+    background-color: rgba(200, 200, 200, 0.5);       
+    box-shadow: 2px 2px 3px #000;
+}
+
+.zzis-slide-readmore-btn a.zzis-slide-readmore-btn-link {
+    color: #fff;
+    text-decoration: none;
+    border: 0px;
+}
+
+.zzis-slide-readmore-btn a.zzis-slide-readmore-btn-link:hover {    
+    color: #fff;
+    text-decoration: none;
+}

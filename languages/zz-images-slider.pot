@@ -1,0 +1,604 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR zudikas zveris
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: ZZ Image Slider 1.0.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-07-28 22:04+0300\n"
+"PO-Revision-Date: 2015-07-28 22:04+0200\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: \n"
+"X-Generator: Eazy Po 0.9.5.3\n"
+
+#: lib/controlers/JSSOR_Settings.php:51
+msgid "Read More"
+msgstr ""
+
+#: lib/controlers/JSSOR_Settings.php:73
+msgid "AutoPlay"
+msgstr ""
+
+#: lib/controlers/JSSOR_Settings.php:75
+msgid ""
+"Whether to auto play, to enable slideshow, this option must be set to true. "
+msgstr ""
+
+#: lib/controlers/JSSOR_Settings.php:79
+msgid "Transition"
+msgstr ""
+
+#: lib/controlers/JSSOR_Settings.php:81
+msgid "Slideshow transition"
+msgstr ""
+
+#: lib/controlers/JSSOR_Settings.php:82
+msgid "default"
+msgstr ""
+
+#: lib/controlers/JSSOR_Settings.php:83
+msgid "right to left"
+msgstr ""
+
+#: lib/controlers/JSSOR_Settings.php:84
+msgid "left to right"
+msgstr ""
+
+#: lib/controlers/JSSOR_Settings.php:85
+msgid "bounce down"
+msgstr ""
+
+#: lib/controlers/JSSOR_Settings.php:86
+msgid "bounce up"
+msgstr ""
+
+#: lib/controlers/JSSOR_Settings.php:87
+msgid "bounce right"
+msgstr ""
+
+#: lib/controlers/JSSOR_Settings.php:88
+msgid "bounce left"
+msgstr ""
+
+#: lib/controlers/JSSOR_Settings.php:89
+msgid "swicth"
+msgstr ""
+
+#: lib/controlers/JSSOR_Settings.php:90
+msgid "extrude replace"
+msgstr ""
+
+#: lib/controlers/JSSOR_Settings.php:91
+msgid "fade twins"
+msgstr ""
+
+#: lib/controlers/JSSOR_Settings.php:92
+msgid "rotate overlap"
+msgstr ""
+
+#: lib/controlers/JSSOR_Settings.php:93
+msgid "fly twins"
+msgstr ""
+
+#: lib/controlers/JSSOR_Settings.php:94
+msgid "rotate axis up overlap"
+msgstr ""
+
+#: lib/controlers/JSSOR_Settings.php:95
+msgid "return TB"
+msgstr ""
+
+#: lib/controlers/JSSOR_Settings.php:96
+msgid "return LR"
+msgstr ""
+
+#: lib/controlers/JSSOR_Settings.php:97
+msgid "swing outside in stairs"
+msgstr ""
+
+#: lib/controlers/JSSOR_Settings.php:98
+msgid "swing outside in zigzag"
+msgstr ""
+
+#: lib/controlers/JSSOR_Settings.php:99
+msgid "swing inside in stairs"
+msgstr ""
+
+#: lib/controlers/JSSOR_Settings.php:100
+msgid "swing inside in zigzag"
+msgstr ""
+
+#: lib/controlers/JSSOR_Settings.php:101
+msgid "dodge dance inside square"
+msgstr ""
+
+#: lib/controlers/JSSOR_Settings.php:102
+msgid "flutter inside in"
+msgstr ""
+
+#: lib/controlers/JSSOR_Settings.php:103
+msgid "flutter inside in wind"
+msgstr ""
+
+#: lib/controlers/JSSOR_Settings.php:104
+msgid "flutter inside in swirl"
+msgstr ""
+
+#: lib/controlers/JSSOR_Settings.php:105
+msgid "flutter inside in column"
+msgstr ""
+
+#: lib/controlers/JSSOR_Settings.php:106
+msgid "rotate zoom- in R"
+msgstr ""
+
+#: lib/controlers/JSSOR_Settings.php:107
+msgid "zoom+ in"
+msgstr ""
+
+#: lib/controlers/JSSOR_Settings.php:108
+msgid "zoom- in"
+msgstr ""
+
+#: lib/controlers/JSSOR_Settings.php:109
+msgid "collapse stairs"
+msgstr ""
+
+#: lib/controlers/JSSOR_Settings.php:110
+msgid "collapse circle"
+msgstr ""
+
+#: lib/controlers/JSSOR_Settings.php:111
+msgid "horizontal fly strape"
+msgstr ""
+
+#: lib/controlers/JSSOR_Settings.php:112
+msgid "vertical bounce atripe"
+msgstr ""
+
+#: lib/controlers/JSSOR_Settings.php:113
+msgid "horizontal bounce atripe"
+msgstr ""
+
+#: lib/controlers/JSSOR_Settings.php:114
+msgid "float right random"
+msgstr ""
+
+#: lib/controlers/JSSOR_Settings.php:115
+msgid "float up random"
+msgstr ""
+
+#: lib/controlers/JSSOR_Settings.php:121
+msgid "Start Index"
+msgstr ""
+
+#: lib/controlers/JSSOR_Settings.php:123
+msgid "Index of slide to display when initialize, default value is 0 "
+msgstr ""
+
+#: lib/controlers/JSSOR_Settings.php:127
+msgid "Loop"
+msgstr ""
+
+#: lib/controlers/JSSOR_Settings.php:129
+msgid ""
+"Enable loop(circular) of carousel or not, 0: stop, 1: loop, 2 rewind, "
+"default value is 1 "
+msgstr ""
+
+#: lib/controlers/JSSOR_Settings.php:130
+msgid "stop"
+msgstr ""
+
+#: lib/controlers/JSSOR_Settings.php:131
+msgid "loop"
+msgstr ""
+
+#: lib/controlers/JSSOR_Settings.php:132
+msgid "rewind"
+msgstr ""
+
+#: lib/controlers/JSSOR_Settings.php:136
+msgid "AutoPlay Steps"
+msgstr ""
+
+#: lib/controlers/JSSOR_Settings.php:138
+msgid ""
+"Steps to go for each auto play request. Possible value can be 1, 2, -1, "
+"-2 ..."
+msgstr ""
+
+#: lib/controlers/JSSOR_Settings.php:142
+msgid "AutoPlay Interval"
+msgstr ""
+
+#: lib/controlers/JSSOR_Settings.php:144
+msgid ""
+"Interval (in milliseconds) to go for next slide since the previous stopped "
+"if the slider is auto playing "
+msgstr ""
+
+#: lib/controlers/JSSOR_Settings.php:148
+msgid "Slide Duration"
+msgstr ""
+
+#: lib/controlers/JSSOR_Settings.php:150
+msgid "Specifies default duration for right to left animation in milliseconds"
+msgstr ""
+
+#: lib/controlers/JSSOR_Settings.php:154
+msgid "Pause On Hover"
+msgstr ""
+
+#: lib/controlers/JSSOR_Settings.php:156
+msgid ""
+"Whether to pause when mouse over if a slider is auto playing, 0: no pause, "
+"1: pause for desktop, 2: pause for touch device, 3: pause for desktop and "
+"touch device, 4: freeze for desktop, 8: freeze for touch device, 12: freeze "
+"for desktop and touch device, default value is 1 "
+msgstr ""
+
+#: lib/controlers/JSSOR_Settings.php:157
+msgid "no pause"
+msgstr ""
+
+#: lib/controlers/JSSOR_Settings.php:158
+msgid "pause for desktop"
+msgstr ""
+
+#: lib/controlers/JSSOR_Settings.php:159
+msgid "pause for touch device"
+msgstr ""
+
+#: lib/controlers/JSSOR_Settings.php:160
+msgid "pause for desktop and touch device"
+msgstr ""
+
+#: lib/controlers/JSSOR_Settings.php:161
+msgid "freeze for desktop"
+msgstr ""
+
+#: lib/controlers/JSSOR_Settings.php:162
+msgid "freeze for touch device"
+msgstr ""
+
+#: lib/controlers/JSSOR_Settings.php:163
+msgid "freeze for desktop and touch device"
+msgstr ""
+
+#: lib/controlers/JSSOR_Settings.php:168
+msgid "Fill Mode"
+msgstr ""
+
+#: lib/controlers/JSSOR_Settings.php:170
+msgid ""
+"The way to fill image in slide, 0: stretch, 1: contain (keep aspect ratio "
+"and put all inside slide), 2: cover (keep aspect ratio and cover whole "
+"slide), 4: actual size, 5: contain for large image and actual size for small "
+"image, default value is 0 "
+msgstr ""
+
+#: lib/controlers/JSSOR_Settings.php:171
+msgid "stretch"
+msgstr ""
+
+#: lib/controlers/JSSOR_Settings.php:172
+msgid "contain"
+msgstr ""
+
+#: lib/controlers/JSSOR_Settings.php:173
+msgid "cover"
+msgstr ""
+
+#: lib/controlers/JSSOR_Settings.php:174
+msgid "actual size"
+msgstr ""
+
+#: lib/controlers/JSSOR_Settings.php:175
+msgid "contain for large image"
+msgstr ""
+
+#: lib/controlers/JSSOR_Settings.php:179
+msgid "Play Orientation"
+msgstr ""
+
+#: lib/controlers/JSSOR_Settings.php:181
+msgid ""
+"Orientation to play slide (for auto play, navigation), 1: horizontal, 2: "
+"vertical "
+msgstr ""
+
+#: lib/controlers/JSSOR_Settings.php:182 lib/controlers/JSSOR_Settings.php:193
+msgid "horizontal"
+msgstr ""
+
+#: lib/controlers/JSSOR_Settings.php:183 lib/controlers/JSSOR_Settings.php:194
+msgid "vertical"
+msgstr ""
+
+#: lib/controlers/JSSOR_Settings.php:184
+msgid "horizontal reverse"
+msgstr ""
+
+#: lib/controlers/JSSOR_Settings.php:185
+msgid "vertical reverse"
+msgstr ""
+
+#: lib/controlers/JSSOR_Settings.php:189
+msgid "Drag Orientation"
+msgstr ""
+
+#: lib/controlers/JSSOR_Settings.php:191
+msgid ""
+"Orientation to drag slide, 0: no drag, 1: horizental, 2: vertical, 3: either "
+"(Note that the $DragOrientation should be the same as $PlayOrientation when "
+"$DisplayPieces is greater than 1, or parking position is not 0) "
+msgstr ""
+
+#: lib/controlers/JSSOR_Settings.php:192
+msgid "no drag"
+msgstr ""
+
+#: lib/controlers/JSSOR_Settings.php:195
+msgid "either"
+msgstr ""
+
+#: lib/controlers/JSSOR_Settings.php:199
+msgid "Arrow Key Navigation"
+msgstr ""
+
+#: lib/controlers/JSSOR_Settings.php:201
+msgid "Allows keyboard (arrow key) navigation or not "
+msgstr ""
+
+#: lib/controlers/JSSOR_Settings.php:206
+msgid "Responsive"
+msgstr ""
+
+#: lib/controlers/JSSOR_Settings.php:208
+msgid ""
+"Enable responsive slider. If enabled, sliders width and height depends on "
+"sliders parent container width and height."
+msgstr ""
+
+#: lib/controlers/JSSOR_Settings.php:213
+msgid "Slide Spacing"
+msgstr ""
+
+#: lib/controlers/JSSOR_Settings.php:215
+msgid "Space between each slide in pixels "
+msgstr ""
+
+#: lib/controlers/JSSOR_Settings.php:219
+msgid "Slide Width"
+msgstr ""
+
+#: lib/controlers/JSSOR_Settings.php:221
+msgid "Width of every slide in pixels"
+msgstr ""
+
+#: lib/controlers/JSSOR_Settings.php:225
+msgid "Slide Height"
+msgstr ""
+
+#: lib/controlers/JSSOR_Settings.php:227
+msgid "Height of every slide in pixels"
+msgstr ""
+
+#: lib/controlers/JSSOR_Settings.php:233
+msgid "Show Bullets"
+msgstr ""
+
+#: lib/controlers/JSSOR_Settings.php:235
+msgid "Show navigation bullets"
+msgstr ""
+
+#: lib/controlers/JSSOR_Settings.php:237 lib/controlers/JSSOR_Settings.php:256
+#: lib/controlers/JSSOR_Settings.php:276
+msgid "Never"
+msgstr ""
+
+#: lib/controlers/JSSOR_Settings.php:238 lib/controlers/JSSOR_Settings.php:257
+#: lib/controlers/JSSOR_Settings.php:277
+msgid "Mouse Over"
+msgstr ""
+
+#: lib/controlers/JSSOR_Settings.php:239 lib/controlers/JSSOR_Settings.php:258
+#: lib/controlers/JSSOR_Settings.php:278
+msgid "Always"
+msgstr ""
+
+#: lib/controlers/JSSOR_Settings.php:244
+msgid "Bullets Skin"
+msgstr ""
+
+#: lib/controlers/JSSOR_Settings.php:246
+msgid "Choose navigation bullets skin."
+msgstr ""
+
+#: lib/controlers/JSSOR_Settings.php:252
+msgid "Show Arrows"
+msgstr ""
+
+#: lib/controlers/JSSOR_Settings.php:254
+msgid "Show navigation arrows."
+msgstr ""
+
+#: lib/controlers/JSSOR_Settings.php:263
+msgid "Arrows Skin"
+msgstr ""
+
+#: lib/controlers/JSSOR_Settings.php:265
+msgid "Choose navigation arrows skin."
+msgstr ""
+
+#: lib/controlers/JSSOR_Settings.php:272
+msgid "Show Thumbnails"
+msgstr ""
+
+#: lib/controlers/JSSOR_Settings.php:274
+msgid "Show images thumbnails"
+msgstr ""
+
+#: lib/controlers/JSSOR_Settings.php:283
+msgid "Thumbnails Skin"
+msgstr ""
+
+#: lib/controlers/JSSOR_Settings.php:285
+msgid "Choose thumbnails skin."
+msgstr ""
+
+#: lib/controlers/JSSOR_Settings.php:293
+msgid "Read More Button Title"
+msgstr ""
+
+#: lib/controlers/JSSOR_Settings.php:372 lib/controlers/JSSOR_Settings.php:388
+#: lib/controlers/JSSOR_Settings.php:414
+msgid "(PRO)"
+msgstr ""
+
+#: lib/controlers/zzis.php:52
+msgid "Are you sure you want to delete this?"
+msgstr ""
+
+#: lib/controlers/zzis.php:72 lib/controlers/zzis.php:73
+#: lib/controlers/zzis.php:84
+msgctxt "zzis_gallery"
+msgid "ZZ Image Slider"
+msgstr ""
+
+#: lib/controlers/zzis.php:74 lib/controlers/zzis.php:75
+msgctxt "zzis_gallery"
+msgid "Add New Image Slider"
+msgstr ""
+
+#: lib/controlers/zzis.php:76
+msgctxt "zzis_gallery"
+msgid "Edit Image Slider"
+msgstr ""
+
+#: lib/controlers/zzis.php:77
+msgctxt "zzis_gallery"
+msgid "New Image Slider"
+msgstr ""
+
+#: lib/controlers/zzis.php:78
+msgctxt "zzis_gallery"
+msgid "View Image Slider"
+msgstr ""
+
+#: lib/controlers/zzis.php:79
+msgctxt "zzis_gallery"
+msgid "Search Image Slider"
+msgstr ""
+
+#: lib/controlers/zzis.php:80
+msgctxt "zzis_gallery"
+msgid "No Image Slider found"
+msgstr ""
+
+#: lib/controlers/zzis.php:81
+msgctxt "zzis_gallery"
+msgid "No Image found in Trash"
+msgstr ""
+
+#: lib/controlers/zzis.php:82
+msgctxt "zzis_gallery"
+msgid "Parent Image:"
+msgstr ""
+
+#: lib/controlers/zzis.php:83
+msgid "All Image Sliders"
+msgstr ""
+
+#: lib/controlers/zzis.php:115
+msgid "ZZ Image Slider Title"
+msgstr ""
+
+#: lib/controlers/zzis.php:116
+msgid "ZZ Image Slider Shortcode"
+msgstr ""
+
+#: lib/controlers/zzis.php:117
+msgid "Date"
+msgstr ""
+
+#: lib/controlers/zzis.php:134
+msgid "Add Images"
+msgstr ""
+
+#: lib/controlers/zzis.php:135
+msgid "Apply Setting On ZZ Image Slider"
+msgstr ""
+
+#: lib/controlers/zzis.php:136
+msgid "Copy Image Slider Shortcode"
+msgstr ""
+
+#: lib/controlers/zzis.php:137
+msgid "Ratings"
+msgstr ""
+
+#: lib/controlers/zzis.php:140
+msgid "Upgrade to PRO"
+msgstr ""
+
+#: lib/views/backend/images_meta_box.php:26
+msgid "Add New Images"
+msgstr ""
+
+#: lib/views/backend/image_block.php:10
+msgid "Slide Title"
+msgstr ""
+
+#: lib/views/backend/image_block.php:11
+msgid "Enter Slide Title"
+msgstr ""
+
+#: lib/views/backend/image_block.php:14
+msgid "Slide Description"
+msgstr ""
+
+#: lib/views/backend/image_block.php:15
+msgid "Enter Slide Description"
+msgstr ""
+
+#: lib/views/backend/image_block.php:18
+msgid "Read More Link"
+msgstr ""
+
+#: lib/views/backend/image_block.php:19
+msgid "Enter Read More Link"
+msgstr ""
+
+#: lib/views/backend/rate_us_meta_box.php:12
+msgid "Please Review & Rate This Plugin On WordPress"
+msgstr ""
+
+#: lib/views/backend/rate_us_meta_box.php:22
+msgid "RATE ME"
+msgstr ""
+
+#: lib/views/backend/settings_meta_box.php:28
+msgid "Save"
+msgstr ""
+
+#: lib/views/backend/shortcode_meta_box.php:1
+msgid "Use below shortcode in any Page/Post to publish your slider"
+msgstr ""
+
+#: lib/views/backend/upgrade_meta_box.php:2
+msgid "Upgrade to ZZ Image Slider PRO"
+msgstr ""
+
+#: lib/views/backend/upgrade_meta_box.php:6
+msgid "Upgrade"
+msgstr ""
