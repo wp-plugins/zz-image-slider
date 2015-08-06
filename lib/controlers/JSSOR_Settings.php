@@ -23,7 +23,7 @@ class JSSOR_Settings {
         self::$defaults = array(            
             
             'AutoPlay' => true,
-            'Transition' => '',            
+            'Transition' => array(''),            
             'StartIndex' => 0,            
             'Loop' => 1,
             'AutoPlaySteps' => 1,
@@ -48,7 +48,9 @@ class JSSOR_Settings {
             'ShowThumbnails' => 0,
             'ThumbnailsSkin' => 1,
             
-            'ReadMoreButtonTitle' => __('Read More', ZZIS_TEXT_DOMAIN)
+            'ReadMoreButtonTitle' => __('Read More', ZZIS_TEXT_DOMAIN),
+            
+            'Styles' => 0,
             
             //disabled - using defaults
 //            'LazyLoading' => '1',                                  
@@ -77,42 +79,42 @@ class JSSOR_Settings {
                 ),
             'Transition' => array(
                     'caption' => __('Transition', ZZIS_TEXT_DOMAIN),
-                    'type' => 'array',
+                    'type' => 'multiselect',
                     'descr' => __('Slideshow transition', ZZIS_TEXT_DOMAIN),
                     'options' => array( __("default", ZZIS_TEXT_DOMAIN) => '', 
-                                        __("right to left", ZZIS_TEXT_DOMAIN) => '{$Duration:400,x:-1,$Easing:$JssorEasing$.$EaseOutQuad}',
-                                        __("left to right", ZZIS_TEXT_DOMAIN) => '{$Duration:400,x:1,$Easing:$JssorEasing$.$EaseOutQuad}',
-                                        __("bounce down", ZZIS_TEXT_DOMAIN) => '{$Duration:1000,y:1,$Easing:$JssorEasing$.$EaseInBounce}',
-                                        __("bounce up", ZZIS_TEXT_DOMAIN) => '{$Duration:1000,y:-1,$Easing:$JssorEasing$.$EaseInBounce}',
-                                        __("bounce right", ZZIS_TEXT_DOMAIN) => '{$Duration:1000,x:1,$Easing:$JssorEasing$.$EaseInBounce}',
-                                        __("bounce left", ZZIS_TEXT_DOMAIN) => '{$Duration:1000,x:-1,$Easing:$JssorEasing$.$EaseInBounce}',                        
-                                        __("swicth", ZZIS_TEXT_DOMAIN) => '{$Duration:1400,x:0.25,$Zoom:1.5,$Easing:{$Left:$JssorEasing$.$EaseInWave,$Zoom:$JssorEasing$.$EaseInSine},$Opacity:2,$ZIndex:-10,$Brother:{$Duration:1400,x:-0.25,$Zoom:1.5,$Easing:{$Left:$JssorEasing$.$EaseInWave,$Zoom:$JssorEasing$.$EaseInSine},$Opacity:2,$ZIndex:-10}}', 
-                                        __("extrude replace", ZZIS_TEXT_DOMAIN) => '{$Duration:1600,x:-0.2,$Delay:40,$Cols:12}', 
-                                        __("fade twins", ZZIS_TEXT_DOMAIN) => '{$Duration:700,$Opacity:2,$Brother:{$Duration:1000,$Opacity:2}}',
-                                        __("rotate overlap", ZZIS_TEXT_DOMAIN) => '{$Duration:1200,$Zoom:11,$Rotate:-1,$Easing:{$Zoom:$JssorEasing$.$EaseInQuad,$Opacity:$JssorEasing$.$EaseLinear,$Rotate:$JssorEasing$.$EaseInQuad},$Opacity:2,$Round:{$Rotate:0.5},$Brother:{$Duration:1200,$Zoom:1,$Rotate:1,$Easing:$JssorEasing$.$EaseSwing,$Opacity:2,$Round:{$Rotate:0.5},$Shift:90}}',
-                                        __("fly twins", ZZIS_TEXT_DOMAIN) => '{$Duration:1500,x:0.3}',
-                                        __("rotate axis up overlap", ZZIS_TEXT_DOMAIN) => '{$Duration:1200,x:0.25,y:0.5,$Rotate:-0.1,$Easing:{$Left:$JssorEasing$.$EaseInQuad,$Top:$JssorEasing$.$EaseInQuad,$Opacity:$JssorEasing$.$EaseLinear,$Rotate:$JssorEasing$.$EaseInQuad},$Opacity:2,$Brother:{$Duration:1200,x:-0.1,y:-0.7,$Rotate:0.1,$Easing:{$Left:$JssorEasing$.$EaseInQuad,$Top:$JssorEasing$.$EaseInQuad,$Opacity:$JssorEasing$.$EaseLinear,$Rotate:$JssorEasing$.$EaseInQuad},$Opacity:2}}',
-                                        __("return TB", ZZIS_TEXT_DOMAIN) => '{$Duration:1200,y:-1,$Easing:{$Top:$JssorEasing$.$EaseInOutQuart,$Opacity:$JssorEasing$.$EaseLinear},$Opacity:2,$ZIndex:-10,$Brother:{$Duration:1200,y:-1,$Easing:{$Top:$JssorEasing$.$EaseInOutQuart,$Opacity:$JssorEasing$.$EaseLinear},$Opacity:2,$ZIndex:-10,$Shift:-100}}',
-                                        __("return LR", ZZIS_TEXT_DOMAIN) => '{$Duration:1200,x:1,$Delay:40,$Cols:6,$Formation:$JssorSlideshowFormations$.$FormationStraight,$Easing:{$Left:$JssorEasing$.$EaseInOutQuart,$Opacity:$JssorEasing$.$EaseLinear},$Opacity:2,$ZIndex:-10,$Brother:{$Duration:1200,x:1,$Delay:40,$Cols:6,$Formation:$JssorSlideshowFormations$.$FormationStraight,$Easing:{$Top:$JssorEasing$.$EaseInOutQuart,$Opacity:$JssorEasing$.$EaseLinear},$Opacity:2,$ZIndex:-10,$Shift:-100}}',
-                                        __("swing outside in stairs", ZZIS_TEXT_DOMAIN) => '{$Duration:1200,x:0.2,y:-0.1,$Delay:20,$Cols:8,$Rows:4,$Clip:15}',
-                                        __("swing outside in zigzag", ZZIS_TEXT_DOMAIN) => '{$Duration:1200,x:0.2,y:-0.1,$Delay:20,$Cols:8,$Rows:4,$Clip:15}',
-                                        __("swing inside in stairs", ZZIS_TEXT_DOMAIN) => '{$Duration:1200,x:0.2,y:-0.1,$Delay:20,$Cols:8,$Rows:4,$Clip:15}',
-                                        __("swing inside in zigzag", ZZIS_TEXT_DOMAIN) => '{$Duration:1200,x:0.2,y:-0.1,$Delay:20,$Cols:8,$Rows:4,$Clip:15}',
-                                        __("dodge dance inside square", ZZIS_TEXT_DOMAIN) => '{$Duration:1500,x:0.2,y:-0.1,$Delay:20,$Cols:8,$Rows:4,$Clip:15}',
-                                        __("flutter inside in", ZZIS_TEXT_DOMAIN) => '{$Duration:1800,x:1,$Delay:30,$Cols:10,$Rows:5,$Clip:15}',
-                                        __("flutter inside in wind", ZZIS_TEXT_DOMAIN) => '{$Duration:1800,x:1,y:0.2,$Delay:30,$Cols:10,$Rows:5,$Clip:15}',
-                                        __("flutter inside in swirl", ZZIS_TEXT_DOMAIN) => '{$Duration:1800,x:1,y:0.2,$Delay:30,$Cols:10,$Rows:5,$Clip:15}',
+                                        __("right to left", ZZIS_TEXT_DOMAIN) =>            '{$Duration:400,x:-1,$Easing:$JssorEasing$.$EaseOutQuad}',
+                                        __("left to right", ZZIS_TEXT_DOMAIN) =>            '{$Duration:400,x:1,$Easing:$JssorEasing$.$EaseOutQuad}',
+                                        __("bounce down", ZZIS_TEXT_DOMAIN) =>              '{$Duration:1000,y:1,$Easing:$JssorEasing$.$EaseInBounce}',
+                                        __("bounce up", ZZIS_TEXT_DOMAIN) =>                '{$Duration:1000,y:-1,$Easing:$JssorEasing$.$EaseInBounce}',
+                                        __("bounce right", ZZIS_TEXT_DOMAIN) =>             '{$Duration:1000,x:1,$Easing:$JssorEasing$.$EaseInBounce}',
+                                        __("bounce left", ZZIS_TEXT_DOMAIN) =>              '{$Duration:1000,x:-1,$Easing:$JssorEasing$.$EaseInBounce}',                        
+                                        __("swicth", ZZIS_TEXT_DOMAIN) =>                   '{$Duration:1400,x:0.25,$Zoom:1.5,$Easing:{$Left:$JssorEasing$.$EaseInWave,$Zoom:$JssorEasing$.$EaseInSine},$Opacity:2,$ZIndex:-10,$Brother:{$Duration:1400,x:-0.25,$Zoom:1.5,$Easing:{$Left:$JssorEasing$.$EaseInWave,$Zoom:$JssorEasing$.$EaseInSine},$Opacity:2,$ZIndex:-10}}', 
+                                        __("extrude replace", ZZIS_TEXT_DOMAIN) =>          '{$Duration:1600,x:-0.2,$Delay:40,$Cols:12}', 
+                                        __("fade twins", ZZIS_TEXT_DOMAIN) =>               '{$Duration:700,$Opacity:2,$Brother:{$Duration:1000,$Opacity:2}}',
+                                        __("rotate overlap", ZZIS_TEXT_DOMAIN) =>           '{$Duration:1200,$Zoom:11,$Rotate:-1,$Easing:{$Zoom:$JssorEasing$.$EaseInQuad,$Opacity:$JssorEasing$.$EaseLinear,$Rotate:$JssorEasing$.$EaseInQuad},$Opacity:2,$Round:{$Rotate:0.5},$Brother:{$Duration:1200,$Zoom:1,$Rotate:1,$Easing:$JssorEasing$.$EaseSwing,$Opacity:2,$Round:{$Rotate:0.5},$Shift:90}}',
+                                        __("fly twins", ZZIS_TEXT_DOMAIN) =>                '{$Duration:1500,x:0.3}',
+                                        __("rotate axis up overlap", ZZIS_TEXT_DOMAIN) =>   '{$Duration:1200,x:0.25,y:0.5,$Rotate:-0.1,$Easing:{$Left:$JssorEasing$.$EaseInQuad,$Top:$JssorEasing$.$EaseInQuad,$Opacity:$JssorEasing$.$EaseLinear,$Rotate:$JssorEasing$.$EaseInQuad},$Opacity:2,$Brother:{$Duration:1200,x:-0.1,y:-0.7,$Rotate:0.1,$Easing:{$Left:$JssorEasing$.$EaseInQuad,$Top:$JssorEasing$.$EaseInQuad,$Opacity:$JssorEasing$.$EaseLinear,$Rotate:$JssorEasing$.$EaseInQuad},$Opacity:2}}',
+                                        __("return TB", ZZIS_TEXT_DOMAIN) =>                '{$Duration:1200,y:-1,$Easing:{$Top:$JssorEasing$.$EaseInOutQuart,$Opacity:$JssorEasing$.$EaseLinear},$Opacity:2,$ZIndex:-10,$Brother:{$Duration:1200,y:-1,$Easing:{$Top:$JssorEasing$.$EaseInOutQuart,$Opacity:$JssorEasing$.$EaseLinear},$Opacity:2,$ZIndex:-10,$Shift:-100}}',
+                                        __("return LR", ZZIS_TEXT_DOMAIN) =>                '{$Duration:1200,x:1,$Delay:40,$Cols:6,$Formation:$JssorSlideshowFormations$.$FormationStraight,$Easing:{$Left:$JssorEasing$.$EaseInOutQuart,$Opacity:$JssorEasing$.$EaseLinear},$Opacity:2,$ZIndex:-10,$Brother:{$Duration:1200,x:1,$Delay:40,$Cols:6,$Formation:$JssorSlideshowFormations$.$FormationStraight,$Easing:{$Top:$JssorEasing$.$EaseInOutQuart,$Opacity:$JssorEasing$.$EaseLinear},$Opacity:2,$ZIndex:-10,$Shift:-100}}',
+                                        __("swing outside in stairs", ZZIS_TEXT_DOMAIN) =>  '{$Duration:1200,x:0.2,y:-0.1,$Delay:20,$Cols:8,$Rows:4,$Clip:15,$Formation:$JssorSlideshowFormations$.$FormationStraightStairs}',
+                                        __("swing outside in zigzag", ZZIS_TEXT_DOMAIN) =>  '{$Duration:1200,x:0.2,y:-0.1,$Delay:20,$Cols:8,$Rows:4,$Clip:15,$Formation:$JssorSlideshowFormations$.$FormationZigZag}',
+                                        __("swing outside in swirl", ZZIS_TEXT_DOMAIN) =>   '{$Duration:1200,x:0.2,y:-0.1,$Delay:20,$Cols:8,$Rows:4,$Clip:15,$Formation:$JssorSlideshowFormations$.$FormationSwirl}',
+                                        __("swing outside in circle", ZZIS_TEXT_DOMAIN) =>  '{$Duration:1200,x:0.2,y:-0.1,$Delay:20,$Cols:8,$Rows:4,$Clip:15,$Formation:$JssorSlideshowFormations$.$FormationCircle}',
+                                        __("swing outside in square", ZZIS_TEXT_DOMAIN) =>  '{$Duration:1500,x:0.2,y:-0.1,$Delay:20,$Cols:8,$Rows:4,$Clip:15,$Formation:$JssorSlideshowFormations$.$FormationSquare}',
+                                        __("flutter inside in", ZZIS_TEXT_DOMAIN) =>        '{$Duration:1800,x:1,$Delay:30,$Cols:10,$Rows:5,$Clip:15}',
+                                        __("flutter inside in wind", ZZIS_TEXT_DOMAIN) =>   '{$Duration:1800,x:1,y:0.2,$Delay:30,$Cols:10,$Rows:5,$Clip:15,$Formation:$JssorSlideshowFormations$.$FormationWind}',
+                                        __("flutter inside in swirl", ZZIS_TEXT_DOMAIN) =>  '{$Duration:1800,x:1,y:0.2,$Delay:30,$Cols:10,$Rows:5,$Clip:15,$Formation:$JssorSlideshowFormations$.$FormationSwirl}',
                                         __("flutter inside in column", ZZIS_TEXT_DOMAIN) => '{$Duration:1500,x:0.2,y:-0.1,$Delay:150,$Cols:12,$Formation:$JssorSlideshowFormations$.$FormationStraightStairs,$Easing:{$Left:$JssorEasing$.$EaseLinear,$Top:$JssorEasing$.$EaseOutWave,$Opacity:$JssorEasing$.$EaseLinear},$Assembly:260,$Opacity:2,$Round:{$Top:2}}',
-                                        __("rotate zoom- in R", ZZIS_TEXT_DOMAIN) => '{$Duration:1200,x:-0.6,$Zoom:1,$Rotate:1}',
-                                        __("zoom+ in", ZZIS_TEXT_DOMAIN) => '{$Duration:1000,$Zoom:11,$Easing:{$Zoom:$JssorEasing$.$EaseInCubic,$Opacity:$JssorEasing$.$EaseOutQuad},$Opacity:2}',
-                                        __("zoom- in", ZZIS_TEXT_DOMAIN) => '{$Duration:1200,$Zoom:1,$Easing:{$Zoom:$JssorEasing$.$EaseInCubic,$Opacity:$JssorEasing$.$EaseOutQuad},$Opacity:2}',
-                                        __("collapse stairs", ZZIS_TEXT_DOMAIN) => '{$Duration:1000,$Delay:30,$Cols:8,$Rows:4,$Clip:15,$SlideOut:true,$Formation:$JssorSlideshowFormations$.$FormationStraightStairs,$Easing:$JssorEasing$.$EaseOutQuad,$Assembly:2049}',
-                                        __("collapse circle", ZZIS_TEXT_DOMAIN) => '{$Duration:800,$Delay:200,$Cols:8,$Rows:4,$Clip:15,$SlideOut:true,$Formation:$JssorSlideshowFormations$.$FormationCircle,$Assembly:2049}',
-                                        __("horizontal fly strape", ZZIS_TEXT_DOMAIN) => '{$Duration:800,x:1,$Delay:80,$Rows:8,$Formation:$JssorSlideshowFormations$.$FormationStraight,$Easing:{$Left:$JssorEasing$.$EaseInCubic,$Opacity:$JssorEasing$.$EaseOutQuad},$Assembly:513,$Opacity:2}',
-                                        __("vertical bounce atripe", ZZIS_TEXT_DOMAIN) => '{$Duration:800,$Delay:150,$Cols:10,$Clip:1,$Move:true,$Formation:$JssorSlideshowFormations$.$FormationCircle,$Easing:$JssorEasing$.$EaseInBounce,$Assembly:264}',
+                                        __("rotate zoom- in R", ZZIS_TEXT_DOMAIN) =>        '{$Duration:1200,x:-0.6,$Zoom:1,$Rotate:1}',
+                                        __("zoom+ in", ZZIS_TEXT_DOMAIN) =>                 '{$Duration:1000,$Zoom:11,$Easing:{$Zoom:$JssorEasing$.$EaseInCubic,$Opacity:$JssorEasing$.$EaseOutQuad},$Opacity:2}',
+                                        __("zoom- in", ZZIS_TEXT_DOMAIN) =>                 '{$Duration:1200,$Zoom:1,$Easing:{$Zoom:$JssorEasing$.$EaseInCubic,$Opacity:$JssorEasing$.$EaseOutQuad},$Opacity:2}',
+                                        __("collapse stairs", ZZIS_TEXT_DOMAIN) =>          '{$Duration:1000,$Delay:30,$Cols:8,$Rows:4,$Clip:15,$SlideOut:true,$Formation:$JssorSlideshowFormations$.$FormationStraightStairs,$Easing:$JssorEasing$.$EaseOutQuad,$Assembly:2049}',
+                                        __("collapse circle", ZZIS_TEXT_DOMAIN) =>          '{$Duration:800,$Delay:200,$Cols:8,$Rows:4,$Clip:15,$SlideOut:true,$Formation:$JssorSlideshowFormations$.$FormationCircle,$Assembly:2049}',
+                                        __("horizontal fly strape", ZZIS_TEXT_DOMAIN) =>    '{$Duration:800,x:1,$Delay:80,$Rows:8,$Formation:$JssorSlideshowFormations$.$FormationStraight,$Easing:{$Left:$JssorEasing$.$EaseInCubic,$Opacity:$JssorEasing$.$EaseOutQuad},$Assembly:513,$Opacity:2}',
+                                        __("vertical bounce atripe", ZZIS_TEXT_DOMAIN) =>   '{$Duration:800,$Delay:150,$Cols:10,$Clip:1,$Move:true,$Formation:$JssorSlideshowFormations$.$FormationCircle,$Easing:$JssorEasing$.$EaseInBounce,$Assembly:264}',
                                         __("horizontal bounce atripe", ZZIS_TEXT_DOMAIN) => '{$Duration:800,$Delay:150,$Rows:5,$Clip:8,$Move:true,$Formation:$JssorSlideshowFormations$.$FormationCircle,$Easing:$JssorEasing$.$EaseInBounce,$Assembly:264}',
-                                        __("float right random", ZZIS_TEXT_DOMAIN) => '{$Duration:600,x:-1,$Delay:50,$Cols:8,$Rows:4,$SlideOut:true,$Easing:{$Left:$JssorEasing$.$EaseInCubic,$Opacity:$JssorEasing$.$EaseOutQuad},$Opacity:2}',
-                                        __("float up random", ZZIS_TEXT_DOMAIN) => '{$Duration:600,y:1,$Delay:50,$Cols:8,$Rows:4,$SlideOut:true,$Easing:{$Top:$JssorEasing$.$EaseInCubic,$Opacity:$JssorEasing$.$EaseOutQuad},$Opacity:2}',
+                                        __("float right random", ZZIS_TEXT_DOMAIN) =>       '{$Duration:600,x:-1,$Delay:50,$Cols:8,$Rows:4,$SlideOut:true,$Easing:{$Left:$JssorEasing$.$EaseInCubic,$Opacity:$JssorEasing$.$EaseOutQuad},$Opacity:2}',
+                                        __("float up random", ZZIS_TEXT_DOMAIN) =>          '{$Duration:600,y:1,$Delay:50,$Cols:8,$Rows:4,$SlideOut:true,$Easing:{$Top:$JssorEasing$.$EaseInCubic,$Opacity:$JssorEasing$.$EaseOutQuad},$Opacity:2}',
                         ),
                     'pro' => true
                                         
@@ -294,7 +296,31 @@ class JSSOR_Settings {
                     'type' => 'text',                    
                     'descr' => '',                
                     'pro' => false,
-            )
+            ),
+            
+            'Styles' => 0,
+            
+                    'Styles' => array(
+                    'caption' => __('Styles', ZZIS_TEXT_DOMAIN),
+                    'type' => 'array',
+                    'descr' => __('Choose slider styles. To use styles from different location (theme, other plugin, ...) choose "Use Custom Styles".', ZZIS_TEXT_DOMAIN),                                    
+                    'options' => array(  
+                                __('Use default styles', ZZIS_TEXT_DOMAIN) => 0, 
+                                __('Use custom styles', ZZIS_TEXT_DOMAIN) => 1                                 
+                        ),
+                    'pro' => false
+             ),
+            
+//            'CustomStylesText' => array(
+//                    'caption' => __('Custom Styles Text', ZZIS_TEXT_DOMAIN),
+//                    'type' => 'textarea',                    
+//                    'descr' =>  __('Custom CSS code. To use custom CSS from other locations, leave this blank with `Use Custom Styles` enabled.', ZZIS_TEXT_DOMAIN),
+//                    'placeholder' => '.zzis_container h1.zzis-slide-title {'
+//                                   . 'color: #fff;'
+//                                   . '...'
+//                                   . '}',
+//                    'pro' => true,
+//            ),
             
             
             
@@ -371,8 +397,8 @@ class JSSOR_Settings {
                     <tr>
                         <th scope="row"><label><?= $item['caption'] ?> <?= ( $pro_limit ? '<span class="pro_only">' . __("(PRO)", ZZIS_TEXT_DOMAIN) . '</span>' : "") ?></label></th>
                         <td>                            
-                            <span class="dashicons dashicons-yes"></span> <input <?= ( $pro_limit ? "disabled" : "") ?> type="radio" name="ZZIS_se_<?= $name ?>"  value="true" <?php if( $value ) { echo 'checked'; } ?> />
-                            <span class="dashicons dashicons-no"></span> <input <?= ( $pro_limit ? "disabled" : "") ?> type="radio" name="ZZIS_se_<?= $name ?>"  value="false" <?php if( !$value ) { echo 'checked'; } ?> />
+                            <span class="dashicons dashicons-yes"></span> <input <?= ( $pro_limit ? "disabled" : "") ?> type="radio" id="ZZIS_se_<?= $name ?>_on" name="ZZIS_se_<?= $name ?>"  value="true" <?php if( $value ) { echo 'checked'; } ?> />
+                            <span class="dashicons dashicons-no"></span> <input <?= ( $pro_limit ? "disabled" : "") ?> type="radio" id="ZZIS_se_<?= $name ?>_off" name="ZZIS_se_<?= $name ?>"  value="false" <?php if( !$value ) { echo 'checked'; } ?> />
                             <p class="description">
                                 <?= $item['descr']  ?>                                        
                             </p>
@@ -387,7 +413,7 @@ class JSSOR_Settings {
                     <tr>
                         <th scope="row"><label><?= $item['caption'] ?> <?= ( $pro_limit ? '<span class="pro_only">' . __("(PRO)", ZZIS_TEXT_DOMAIN) . '</span>' : "") ?></label></th>
                         <td>
-                            <select <?= ( $pro_limit ? "disabled" : "") ?> name="ZZIS_se_<?= $name ?>" id="ZZIS_se_<?= $name ?>">
+                            <select class="SlectBox" <?= ( $pro_limit ? "disabled" : "") ?> name="ZZIS_se_<?= $name ?>" id="ZZIS_se_<?= $name ?>">
                                 <?php if ( array_key_exists(0, $item['options'] ) )  {?>
                                     <?php foreach ( $item['options'] as $val ) { ?>
                                     <option value="<?= $val ?>" <?= ($val == $value ? "selected" : "") ?>><?= $val ?></option>     
@@ -405,6 +431,47 @@ class JSSOR_Settings {
                     </tr>
                     <?php
                     break;
+                    
+                case 'multiselect':                                                            
+                    
+                    ?>
+                    <tr>
+                        <th scope="row"><label><?= $item['caption'] ?> <?= ( $pro_limit ? '<span class="pro_only">' . __("(PRO)", ZZIS_TEXT_DOMAIN) . '</span>' : "") ?></label></th>
+                        <td>
+                            <select placeholder="<?= __("Choose something", ZZIS_TEXT_DOMAIN) ?>" multiple="multiple" class="SlectBox" <?= ( $pro_limit ? "disabled" : "") ?> name="ZZIS_se_<?= $name ?>[]" id="ZZIS_se_<?= $name ?>">
+                                <?php if ( array_key_exists(0, $item['options'] ) )  {?>
+                                    <?php foreach ( $item['options'] as $val ) { ?>
+                                <option value="<?= $val ?>" <?= ( in_array($val, $value) ? 'selected="selected"' : "") ?>><?= $val ?></option>     
+                                    <?php } ?>                                
+                                <?php } else {?>
+                                    <?php foreach ( $item['options'] as $key => $val ) { ?>
+                                    <option value="<?= $val ?>" <?= ( in_array($val, $value) ? 'selected="selected"' : "") ?>><?= $key ?></option>     
+                                    <?php } ?>
+                                <?php }?>
+                            </select>                            
+                            <p class="description">
+                                <?= $item['descr']  ?>   
+                            </p>
+                        </td>
+                    </tr>
+                    <?php
+                    break;
+                    
+
+                case 'textarea':
+
+                    ?>
+                    <tr>
+                        <th scope="row"><label><?= $item['caption'] ?> <?= ( $pro_limit ? '<span class="pro_only">' . __("(PRO)", ZZIS_TEXT_DOMAIN) . '</span>' : "") ?></label></th>
+                        <td>
+                            <textarea <?php if ($item['placeholder'] != "") { echo 'placeholder="' . $item['placeholder'] . '"'; } ?> <?= ( $pro_limit ? "disabled" : "") ?> name="ZZIS_se_<?= $name ?>" id="ZZIS_se_<?= $name ?>"><?php echo $value; ?></textarea>
+                            <p class="description">
+                                <?= $item['descr']  ?>   
+                            </p>
+                        </td>
+                    </tr>
+                    <?php                    
+                    break;                    
 
                 case 'text':
                 default:
@@ -413,7 +480,7 @@ class JSSOR_Settings {
                     <tr>
                         <th scope="row"><label><?= $item['caption'] ?> <?= ( $pro_limit ? '<span class="pro_only">' . __("(PRO)", ZZIS_TEXT_DOMAIN) . '</span>' : "") ?></label></th>
                         <td>
-                            <input <?= ( $pro_limit ? "disabled" : "") ?> type="text" name="ZZIS_se_<?= $name ?>" id="ZZIS_se_<?= $name ?>" value="<?php echo $value; ?>" />
+                            <input <?php if ($item['placeholder'] != "") { echo 'placeholder="' . $item['placeholder'] . '"'; } ?> <?= ( $pro_limit ? "disabled" : "") ?> type="text" name="ZZIS_se_<?= $name ?>" id="ZZIS_se_<?= $name ?>" value="<?php echo $value; ?>" />
                             <p class="description">
                                 <?= $item['descr']  ?>   
                             </p>
@@ -519,7 +586,7 @@ class JSSOR_Settings {
                 $k = substr( $key,  strlen(self::SETTING_PREFIX) );                                 
 
                 $this->set( $k, $_POST[ $key ] );
-
+                
             }
         }
                 

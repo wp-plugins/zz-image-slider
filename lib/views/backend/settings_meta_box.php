@@ -11,7 +11,7 @@
 </style>
 
 <input type="hidden" id="zzis_settings_action" name="zzis_settings_action" value="zzis-settings-save-settings">
-<table class="form-table">
+<table class="zzis-form-table">
 	<tbody>
 		<tr id="L3">
 			<th scope="row" colspan="2"><h2>Configure Settings For Slider Shortcode: <?php echo "[" . ZZIS_SHORTCODE . " id=$post->ID]"; ?></h2><hr></th>
@@ -21,7 +21,7 @@
                     
                     JSSOR_Settings::get_setting_html_block($key, $se->get($key) );
                 
-                 } ?>
+                 } ?>                            
 	</tbody>        
 </table>
 

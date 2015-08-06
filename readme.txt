@@ -3,7 +3,7 @@ Contributors: zudikas-zveris
 Donate link: http://zzapps.net
 Tags: image, slider, slideshow, responsive, thumbnails
 Requires at least: 3.5
-Tested up to: 4.2.3
+Tested up to: 4.2.4
 Stable tag: trunk
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -55,5 +55,16 @@ Samples can be found [here](http://zzapps.net/zzis/zzis-samples/).
 
 == Changelog ==
 
-= 1.0 =
+= 1.2.0 =
+* ability to disable default css
+* ability to use whole the image for Read More link
+* ability to select multiple transitions (PRO)
+* jssor script loading an the end of the body
+* minor html structure changes
+* transitions fix (PRO)
+
+= 1.1.0 =
+* PHP code
+
+= 1.0.0 =
 * Initial release

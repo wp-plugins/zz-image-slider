@@ -8,7 +8,8 @@
                 $name = $item['zzis_image_label'];
                 $desc = $item['zzis_image_desc'];
                 $readmorelink = $item['zzis_image_readmore_link'];
-                $url = $item['zzis_image_url'];
+                $readmorelink_type = $item['zzis_image_readmore_link_type']; // 0 - button, 1 - whole image
+                $url = $item['zzis_image_url'];                
 
                 require ZZIS_PLUGIN_DIR . "/lib/views/backend/image_block.php";
 

@@ -1,3 +1,4 @@
+<div>
 <script>
         jQuery(document).ready(function ($) {
 
@@ -61,21 +62,41 @@
 
 </script>
 
+<?php if ($this->get("Styles") == 0)  { ?>
+<style scoped>
+    <?php require ZZIS_PLUGIN_DIR . 'css/style.css' ?>
+</style>
+<?php } ?>
+
 <div id="zzis_container_<?= $zzis_post->ID ?>" class="zzis_container" style="position: relative; overflow: hidden; top: 0px; left: 0px; width: <?= $this->get("SlideWidth") ?>px; height: <?= $this->get("SlideHeight") ?>px;">    
     <div u="slides" style="cursor: move; position: absolute; overflow: hidden; left: 0px; top: 0px; width: <?= $this->get("SlideWidth") ?>px; height: <?= $this->get("SlideHeight") ?>px;">
         <?php foreach ($images as $img) { ?>
             <div>
+                <?php if ( $img['zzis_image_readmore_link'] != '' && $img['zzis_image_readmore_link_type'] > 0  ) { ?>
+                <a u="image" href="<?= $img['zzis_image_readmore_link'] ?>">          
+                <?php } ?>
+                        
                 <img u="image" class="zzis-slide-img" src="<?= $img['zzis_image_url'] ?>" />
                 
-                <h1 class="zzis-slide-title"><?= $img['zzis_image_label'] ?> </h1>
-                                
-                <h2 class="zzis-slide-desc"><?= $img['zzis_image_desc'] ?> </h2>
-                
-                <?php if ( $img['zzis_image_readmore_link'] != '' ) { ?>
-                <div class="zzis-slide-readmore-btn">
-                    <a class="zzis-slide-readmore-btn-link" href="<?= $img['zzis_image_readmore_link'] ?>"><?= $this->get_string("ReadMoreButtonTitle") ?></a>
+                <div class="zzis-slide-captions">
+                    <?php if( isset($img['zzis_image_label']) && $img['zzis_image_label'] != "" )  {?>
+                    <h1 class="zzis-slide-title" style="position:relative;"><?= $img['zzis_image_label'] ?> </h1>
+                    <?php } ?>
+
+                    <?php if( isset($img['zzis_image_desc']) && $img['zzis_image_desc'] != "" )  {?>
+                    <h2 class="zzis-slide-desc"  style="position:relative;"><?= $img['zzis_image_desc'] ?> </h2>
+                    <?php } ?>
+
+                    <?php if ( $img['zzis_image_readmore_link'] != '' && $img['zzis_image_readmore_link_type'] === "0" ) { ?>
+                    <div class="zzis-slide-readmore-btn"  style="position:relative;">
+                        <a class="zzis-slide-readmore-btn-link" href="<?= $img['zzis_image_readmore_link'] ?>"><?= $this->get_string("ReadMoreButtonTitle") ?></a>
+                    </div>
+                    <?php } ?> 
                 </div>
-                <?php } ?>                                
+                
+                <?php if ( $img['zzis_image_readmore_link'] != '' && $img['zzis_image_readmore_link_type'] > 0  ) { ?>
+                </a>
+                <?php } ?>
             </div>
         <?php } ?>                                        
     </div>
@@ -89,5 +110,6 @@
         }
     ?>
 
+</div>
 </div>
 

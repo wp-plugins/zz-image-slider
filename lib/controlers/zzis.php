@@ -2,9 +2,14 @@
 
 require ZZIS_PLUGIN_DIR . "/lib/controlers/JSSOR_Settings.php";
 
+if ( PROVERSION ) require_once ZZIS_PLUGIN_DIR . '/lib/pro/plugin-updates/plugin-update-checker.php';
+
+
 class ZZIS {      
     
     static function init () {
+        
+        self::PRO_check_for_update();
                 
         add_image_size( 'zzis_admin_thumb', 300, 300, true ); 
         add_image_size( 'zzis_admin_large', 500,9999 ); 
@@ -28,6 +33,8 @@ class ZZIS {
             add_action('wp_ajax_zzis_get_thumbnail', array( __CLASS__, 'ajax_zzis_get_thumbnail'));
         }
     }   
+    
+
         
     static function activate () {
         // do nothing
@@ -36,35 +43,51 @@ class ZZIS {
     static function deactivate () {                
         // do nothing
     }
-        
+    
+    static function PRO_check_for_update() {
+        if ( PROVERSION ) {
+            $MyUpdateChecker = new PluginUpdateChecker_2_1 (
+                'http://zzapps.net/wp-content/uploads/zzis/zzis-PRO-info.json',
+                ZZIS_PLUGIN_FILE,
+                'zz-images-slider-PRO'
+            );
+        }
+    }
+
+
     static function localize() {
         load_plugin_textdomain( ZZIS_TEXT_DOMAIN, false, ZZIS_PLUGIN_BASE_DIR . '/languages/' );
     }
         
-    static function load_admin_scripts_styles() {        
+    static function load_admin_scripts_styles( $hook ) {        
            
-        wp_enqueue_script('media-upload');
-        wp_enqueue_script('zzis-uploader', ZZIS_PLUGIN_URL . 'js/zzis-uploader.js', array('jquery'));
-        wp_enqueue_media();
+        global $post;
 
-        wp_enqueue_style('zzis-style', ZZIS_PLUGIN_URL . 'css/admin-style.css');
+        if ( $hook == 'post-new.php' || $hook == 'post.php' ) {
+            if ($post->post_type === 'zzis_gallery') {     
+                
+                wp_enqueue_script('media-upload');
+                wp_enqueue_script('zzis-uploader', ZZIS_PLUGIN_URL . 'js/zzis-uploader.js', array('jquery'));
+                wp_enqueue_media();
+                
+                wp_enqueue_script('jquery-sumoselect', ZZIS_PLUGIN_URL . 'js/jquery.sumoselect.min.js', array('jquery'));
+                wp_enqueue_style('jquery-sumoselect-css', ZZIS_PLUGIN_URL . 'css/sumoselect.css');
+                wp_enqueue_script('zzis-multiselect', ZZIS_PLUGIN_URL . 'js/zzis-multiselect.js', array('jquery', 'jquery-sumoselect'));
+
+                wp_enqueue_style('zzis-style', ZZIS_PLUGIN_URL . 'css/admin-style.css');
+
+                $translation_array = array( 'delete' => __( 'Are you sure you want to delete this?', ZZIS_TEXT_DOMAIN ) );
+                wp_localize_script( 'zzis-uploader', 'strings', $translation_array );
         
-        $translation_array = array( 'delete' => __( 'Are you sure you want to delete this?', ZZIS_TEXT_DOMAIN ) );
-        wp_localize_script( 'zzis-uploader', 'strings', $translation_array );
+            }
+        }        
         
     }
     
-    static function load_user_scripts_styles() {
-            global $wp_query;
-            $Posts = $wp_query->posts;
-
-            foreach ($Posts as $Post) {
-                        if ( strpos($Post->post_content, 'ZZIS' ) ) {
-                                wp_enqueue_script( 'jssor', ZZIS_PLUGIN_URL . 'js/jssor.slider.mini.js', array('jquery'), '', false);
-                                wp_enqueue_style( 'zzis-css', ZZIS_PLUGIN_URL. 'css/style.css');
-                    break;
-                } 
-            } 
+    static function load_user_scripts_styles() {                      
+        
+        wp_enqueue_script( 'jssor', ZZIS_PLUGIN_URL . 'js/jssor.slider.mini.js', array('jquery'), '', true);        
+                
     }
     
     static function register_post_type() {
@@ -114,6 +137,7 @@ class ZZIS {
             'cb' => '<input type="checkbox" />',
             'title' => __( 'ZZ Image Slider Title', ZZIS_TEXT_DOMAIN ),
             'shortcode' => __( 'ZZ Image Slider Shortcode', ZZIS_TEXT_DOMAIN ),
+            'phpcode' => __( 'ZZ Image Slider PHP code', ZZIS_TEXT_DOMAIN ),
             'date' => __( 'Date' )
         );
         return $columns;
@@ -125,6 +149,9 @@ class ZZIS {
           case 'shortcode' :
             echo '<input type="text" value="[' . ZZIS_SHORTCODE . ' id=' . $post_id . ']" readonly="readonly" />';
             break;
+          case 'phpcode' : 
+              echo '<input type="text" value="<?= ZZIS(' . $post_id . ') ?>" readonly="readonly" />';
+              break;
           default :
             break;
         }
@@ -162,8 +189,8 @@ class ZZIS {
     static function settings_meta_box($post) { 
         
         $se = new JSSOR_Settings();
-        $se->load( $post->ID );
-    
+        $se->load( $post->ID );    
+        
         require ZZIS_PLUGIN_DIR . "/lib/views/backend/settings_meta_box.php"; 
         
     }
@@ -200,12 +227,14 @@ class ZZIS {
                     $image_label = stripslashes($_POST['zzis_image_label'][$i]);
                     $image_desc = stripslashes($_POST['zzis_image_desc'][$i]);
                     $image_readmore_link = stripslashes($_POST['zzis_image_readmore_link'][$i]);
+                    $image_readmore_link_type = stripslashes($_POST['zzis_image_readmore_link_type'][$i]);
                     $url = $_POST['zzis_image_url'][$i];
                     $images[] = array(
                         'zzis_image_label' => $image_label,
                         'zzis_image_desc' => $image_desc,
                         'zzis_image_url' => $url,
                         'zzis_image_readmore_link' => $image_readmore_link,
+                        'zzis_image_readmore_link_type' => $image_readmore_link_type,
                     );
                 }
                 update_post_meta($post_id, 'zzis_items_details', base64_encode(serialize($images)));
@@ -221,8 +250,8 @@ class ZZIS {
 
     static function settings_meta_save($post_id) {
         
-        if (isset($post_id) && isset($_POST['zzis_settings_action']) == "zzis-settings-save-settings") {
-
+        if (isset($post_id) && isset($_POST['zzis_settings_action']) == "zzis-settings-save-settings") {                                           
+            
             $se = new JSSOR_Settings();           
             $se->save( $post_id ); 
                         
@@ -240,13 +269,13 @@ class ZZIS {
             $se->load( $atts['id'] );                                                                        
             $se->get_html( $atts['id'] );
             
-        }
+        }        
                                                  
-        wp_reset_query();
+        wp_reset_query();                                
 
         return ob_get_clean();
     }
-
+    
 }
 
 

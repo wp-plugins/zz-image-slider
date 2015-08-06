@@ -59,7 +59,7 @@
     cursor: pointer;
     box-shadow: 0 0 0px rgba(0,0,0,.7);
     width: 20%;
-    min-height: 325px;
+    min-height: 365px;
     position:relative;
 
 }
@@ -101,6 +101,15 @@
     color: #f00;
 }
 
+.zzis-form-table textarea {
+    width: 100%;
+    min-height: 200px;
+}
+
+.zzis-form-table th {
+    vertical-align: top;    
+    text-align: left;
+}
 
 @media (max-width:766px) {
     .zzis-image-entry {
