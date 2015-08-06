@@ -64,7 +64,7 @@ Samples can be found [here](http://zzapps.net/zzis/zzis-samples/).
 * transitions fix (PRO)
 
 = 1.1.0 =
-* PHP code
+* added PHP short code
 
 = 1.0.0 =
 * Initial release
