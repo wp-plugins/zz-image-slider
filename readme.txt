@@ -53,6 +53,10 @@ Samples can be found [here](http://zzapps.net/zzis/zzis-samples/).
 
 == Frequently Asked Questions ==
 
+= I have a question about ZZ Image Slider, what to do? =
+
+You can checkout the the Support section of the slider [page](https://wordpress.org/support/plugin/zz-image-slider) and ask your question there.
+
 == Changelog ==
 
 = 1.2.0 =
