@@ -292,7 +292,7 @@ class JSSOR_Settings {
                 ),            
             
             'ReadMoreButtonTitle' => array(
-                    'caption' => __('Read More Button Title', ZZIS_TEXT_DOMAIN),
+                    'caption' => __('Link Button Title', ZZIS_TEXT_DOMAIN),
                     'type' => 'text',                    
                     'descr' => '',                
                     'pro' => false,

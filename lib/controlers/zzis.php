@@ -228,6 +228,7 @@ class ZZIS {
                     $image_desc = stripslashes($_POST['zzis_image_desc'][$i]);
                     $image_readmore_link = stripslashes($_POST['zzis_image_readmore_link'][$i]);
                     $image_readmore_link_type = stripslashes($_POST['zzis_image_readmore_link_type'][$i]);
+                    $image_visible = stripslashes($_POST['zzis_image_visible'][$i]);
                     $url = $_POST['zzis_image_url'][$i];
                     $images[] = array(
                         'zzis_image_label' => $image_label,
@@ -235,6 +236,7 @@ class ZZIS {
                         'zzis_image_url' => $url,
                         'zzis_image_readmore_link' => $image_readmore_link,
                         'zzis_image_readmore_link_type' => $image_readmore_link_type,
+                        'zzis_image_visible' => $image_visible,
                     );
                 }
                 update_post_meta($post_id, 'zzis_items_details', base64_encode(serialize($images)));

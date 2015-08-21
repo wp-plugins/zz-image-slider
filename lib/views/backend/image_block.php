@@ -15,15 +15,20 @@
             <textarea rows="4" cols="50" id="zzis_image_desc[]" name="zzis_image_desc[]" placeholder="<?php _e("Enter Slide Description", ZZIS_TEXT_DOMAIN) ?>" class="zzis-label-text"><?php echo $desc; ?></textarea>
         </p>
         <p>
-            <label><?php _e("Read More Link", ZZIS_TEXT_DOMAIN) ?></label>
-            <input type="text" id="zzis_image_readmore_link[]" name="zzis_image_readmore_link[]" value="<?php echo $readmorelink; ?>" placeholder="<?php _e("Enter Read More Link", ZZIS_TEXT_DOMAIN) ?>" class="zzis-label-text">            
+            <label><?php _e("Link", ZZIS_TEXT_DOMAIN) ?></label>
+            <input type="text" id="zzis_image_readmore_link[]" name="zzis_image_readmore_link[]" value="<?php echo $readmorelink; ?>" placeholder="<?php _e("Enter Custom Link", ZZIS_TEXT_DOMAIN) ?>" class="zzis-label-text">            
         </p>
         <p>
-            <label><?php _e("Read More Link Type", ZZIS_TEXT_DOMAIN) ?></label>
+            <label><?php _e("Link Type", ZZIS_TEXT_DOMAIN) ?></label>
             <select name="zzis_image_readmore_link_type[]" id="zzis_image_readmore_link_type[]">
-                <option value="0" <?= ((!isset($readmorelink_type) || $readmorelink_type == "0") ? "selected" : "") ?> ><?php _e("use button", ZZIS_TEXT_DOMAIN) ?></option>
-                <option value="1" <?= ($readmorelink_type == "1" ? "selected" : "") ?>><?php _e("use whole image", ZZIS_TEXT_DOMAIN) ?></option>
+                <option value="0" <?= ((!isset($readmorelink_type) || $readmorelink_type == "0") ? "selected" : "") ?> ><?php _e("button", ZZIS_TEXT_DOMAIN) ?></option>
+                <option value="1" <?= ($readmorelink_type == "1" ? "selected" : "") ?>><?php _e("image", ZZIS_TEXT_DOMAIN) ?></option>
             </select>
+        </p>
+        <p>
+            <label><?php _e("Visible", ZZIS_TEXT_DOMAIN) ?></label>
+            <input type="checkbox" <?= ( $visible=="1" ? "CHECKED" : "") ?> onchange="jQuery( this ).next().val( this.checked ? '1' : '0' );" />
+            <input name="zzis_image_visible[]" type="hidden" value="<?= $visible ?>" />
         </p>
     </div>
 </li>

@@ -1,14 +1,14 @@
 # SOME DESCRIPTIVE TITLE.
-# Copyright (C) 2015 zudikas-zveris
+# Copyright (C) YEAR zudikas-zveris
 # This file is distributed under the same license as the PACKAGE package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: ZZ Image Slider 1.2.0\n"
+"Project-Id-Version: ZZ Image Slider 1.3.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-08-06 13:46+0300\n"
-"PO-Revision-Date: 2015-08-06 14:49+0200\n"
+"POT-Creation-Date: 2015-08-21 16:52+0300\n"
+"PO-Revision-Date: 2015-08-21 16:58+0200\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: \n"
@@ -467,7 +467,7 @@ msgid "Choose thumbnails skin."
 msgstr "Nurodomas sumažintų paveikslėlių temos numeris."
 
 #: lib/controlers/JSSOR_Settings.php:295
-msgid "Read More Button Title"
+msgid "Link Button Title"
 msgstr "Detalesnės info mygtuko pavadinimas"
 
 #: lib/controlers/JSSOR_Settings.php:304
@@ -590,7 +590,7 @@ msgstr "Reitingai"
 msgid "Upgrade to PRO"
 msgstr "Pagerinti iki PRO"
 
-#: lib/views/backend/images_meta_box.php:27
+#: lib/views/backend/images_meta_box.php:28
 msgid "Add New Images"
 msgstr "Pridėti naujų paveikslėlių"
 
@@ -611,24 +611,28 @@ msgid "Enter Slide Description"
 msgstr "Įveskite paveikslėlio aprašą"
 
 #: lib/views/backend/image_block.php:18
-msgid "Read More Link"
+msgid "Link"
 msgstr "Detalesnės info nuoroda"
 
 #: lib/views/backend/image_block.php:19
-msgid "Enter Read More Link"
+msgid "Enter Custom Link"
 msgstr "Įveskite detalesnės informacijos nuorodą"
 
 #: lib/views/backend/image_block.php:22
-msgid "Read More Link Type"
+msgid "Link Type"
 msgstr "Detalesnės info nuorodos tipas"
 
 #: lib/views/backend/image_block.php:24
-msgid "use button"
-msgstr "naudoti mygtuką"
+msgid "button"
+msgstr "mygtukas"
 
 #: lib/views/backend/image_block.php:25
-msgid "use whole image"
-msgstr "naudoti visą paveikslėlį"
+msgid "image"
+msgstr "visas paveikslėlis"
+
+#: lib/views/backend/image_block.php:29
+msgid "Visible"
+msgstr "Matomas"
 
 #: lib/views/backend/rate_us_meta_box.php:12
 msgid "Please Review & Rate This Plugin On WordPress"

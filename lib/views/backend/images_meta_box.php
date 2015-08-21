@@ -10,6 +10,7 @@
                 $readmorelink = $item['zzis_image_readmore_link'];
                 $readmorelink_type = $item['zzis_image_readmore_link_type']; // 0 - button, 1 - whole image
                 $url = $item['zzis_image_url'];                
+                $visible = ( isset($item['zzis_image_visible']) ? $item['zzis_image_visible'] : "1"); 
 
                 require ZZIS_PLUGIN_DIR . "/lib/views/backend/image_block.php";
 
