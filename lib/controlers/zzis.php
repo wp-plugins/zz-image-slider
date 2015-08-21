@@ -209,6 +209,7 @@ class ZZIS {
         $name = "";
         $desc = "";
         $readmorelink = "";
+        $visible = "1";
         
         require ZZIS_PLUGIN_DIR . "/lib/views/backend/image_block.php";
     }
