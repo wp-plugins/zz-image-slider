@@ -3,7 +3,7 @@ Contributors: zudikas-zveris
 Donate link: http://zzapps.net
 Tags: image, slider, slideshow, responsive, thumbnails
 Requires at least: 3.5
-Tested up to: 4.3.0
+Tested up to: 4.3
 Stable tag: trunk
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -59,8 +59,11 @@ You can checkout the the Support section of the slider [page](https://wordpress.
 
 == Changelog ==
 
+= 1.3.1 =
+* jssor script loaded where required (not in all pages)
+
 = 1.3.0 =
-* ability to deactive (not delete) the image from viewing in frontend
+* ability to deactivate (not delete) the image from viewing in frontend
 * minor html structure changes
 * minor translation changes
 

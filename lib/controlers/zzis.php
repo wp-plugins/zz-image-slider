@@ -86,7 +86,7 @@ class ZZIS {
     
     static function load_user_scripts_styles() {                      
         
-        wp_enqueue_script( 'jssor', ZZIS_PLUGIN_URL . 'js/jssor.slider.mini.js', array('jquery'), '', true);        
+        //wp_enqueue_script( 'jssor', ZZIS_PLUGIN_URL . 'js/jssor.slider.mini.js', array('jquery'), '', true);        
                 
     }
     
@@ -264,6 +264,8 @@ class ZZIS {
 
     static function process_shortcode( $atts, $content = null ) {
 
+        wp_enqueue_script( 'jssor', ZZIS_PLUGIN_URL . 'js/jssor.slider.mini.js', array('jquery'), '', true);  
+        
         ob_start();
 
         if (isset($atts['id'])) {
