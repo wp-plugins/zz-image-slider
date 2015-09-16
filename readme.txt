@@ -3,7 +3,7 @@ Contributors: zudikas-zveris
 Donate link: http://zzapps.net
 Tags: image, slider, slideshow, responsive, thumbnails
 Requires at least: 3.5
-Tested up to: 4.3
+Tested up to: 4.3.1
 Stable tag: trunk
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
